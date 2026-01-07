@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweets</title>
+<style>
+    body {
+        background-color: rgb(248, 237, 223);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        background-color: rgb(253, 250, 248);
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    }
+
+    .sweets {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive */
+        gap: 30px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .sweets-images {
+        display: flex;
+        flex-direction: column; /* stack image and text */
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        background-color: #fff;
+        transition: transform 0.3s;
+    }
+
+    .sweets-images:hover {
+        transform: scale(1.05);
+    }
+
+    .sweets-images img {
+        width: 100%;   /* responsive */
+        height: auto;
+        border-radius: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        background: orange;
+        border: none;
+        cursor: pointer;
+        margin-top: 8px;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        background: darkorange;
+    }
+
+    .msg {
+        color: green;
+        font-weight: bold;
+        margin-top: 5px;
+        min-height: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sweets {
+            grid-template-columns: 1fr; /* single column on mobile */
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1>Sweets</h1>
+
+<div class="sweets">
+
+    <div class="sweets-images">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZw5edwhwaxvQAcTikUHSAt0UAgr7A0F6VA&s" alt="Rasgulla">
+        <h2>Rasgulla</h2>
+        <p>Price: ₹250 (500gm)</p>
+        <p>Origin: West Bengal & Odisha</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <h4 class="msg"></h4>
+    </div>
+
+    <div class="sweets-images">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD3rlrFkigs18NirkK2YaCO_oIIhVMCwdjjA&s" alt="Ghewar">
+        <h2>Ghewar</h2>
+        <p>Price: ₹400 (per kg)</p>
+        <p>Origin: Rajasthan</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <h4 class="msg"></h4>
+    </div>
+
+    <div class="sweets-images">
+        <img src="https://static.toiimg.com/thumb/55048826.cms?width=1200&height=900" alt="Kaju Katli">
+        <h2>Kaju Katli</h2>
+        <p>Price: ₹500 (per kg)</p>
+        <p>Origin: Maharashtra</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <h4 class="msg"></h4>
+    </div>
+
+    <div class="sweets-images">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAIr_viOvqs8s6mGWo9x_BmAATWYmTqa_ygw&s" alt="Gulab Jamun">
+        <h2>Gulab Jamun</h2>
+        <p>Price: ₹450 (per kg)</p>
+        <p>Origin: UP</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <h4 class="msg"></h4>
+    </div>
+
+</div>
+
+<script>
+function addToCart(btn){
+  btn.nextElementSibling.innerText="added successfully✅";
+}
+</script>
+
+</body>
+</html>

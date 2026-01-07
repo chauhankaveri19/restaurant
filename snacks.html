@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snacks</title>
+<style>
+    body {
+        background-color: rgb(248, 237, 223);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        background-color: rgb(253, 250, 248);
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    }
+
+    .snacks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
+        gap: 30px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .snacks-images {
+        display: flex;
+        flex-direction: column; /* stack image and text vertically */
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        background-color: #fff;
+        transition: transform 0.3s;
+    }
+
+    .snacks-images:hover {
+        transform: scale(1.05);
+    }
+
+    .snacks-images img {
+        width: 100%;   /* responsive image */
+        height: auto;
+        border-radius: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        background: orange;
+        border: none;
+        cursor: pointer;
+        margin-top: 8px;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        background: darkorange;
+    }
+
+    .msg {
+        color: green;
+        font-weight: bold;
+        margin-top: 5px;
+        min-height: 20px; /* keeps layout stable */
+    }
+
+    /* Mobile layout */
+    @media screen and (max-width: 768px) {
+        .snacks {
+            grid-template-columns: 1fr; /* single column on mobile */
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1>Snacks</h1>
+
+<div class="snacks">
+
+    <div class="snacks-images">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotWLPrTs6wSiRW40ayGa53Q3aoUcdFQj_qA&s" alt="Dhokla">
+        <div class="snacks-text">
+            <h2>Dhokla</h2>
+            <p>Price: ₹200 (per kg)</p>
+            <p>Origin: Gujarat</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <h4 class="msg"></h4>
+        </div>
+    </div>
+
+    <div class="snacks-images">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHx0ytXX-uR5tBwddvFZSscSs-gFtb5ZE_Q&s" alt="Pyaaz Kachori">
+        <div class="snacks-text">
+            <h2>Pyaaz Kachori</h2>
+            <p>Price: ₹25</p>
+            <p>Origin: Jodhpur, Rajasthan</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <h4 class="msg"></h4>
+        </div>
+    </div>
+
+    <div class="snacks-images">
+        <img src="https://th.bing.com/th/id/OIP.EPq0t0Y8HOa5Dw9oojxp0gHaHa?w=185&h=185&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Sandwich">
+        <div class="snacks-text">
+            <h2>Sandwich</h2>
+            <p>Price: ₹70</p>
+            <p>Origin: England</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <h4 class="msg"></h4>
+        </div>
+    </div>
+
+    <div class="snacks-images">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVxMDZ89fmuKlbqzOdXvFvhLA89V4J_klI3Q&s" alt="Panipuri">
+        <div class="snacks-text">
+            <h2>Panipuri</h2>
+            <p>Price: ₹20</p>
+            <p>Origin: Bihar</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <h4 class="msg"></h4>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function addToCart(btn){
+  btn.nextElementSibling.innerText="added successfully✅";
+}
+</script>
+
+</body>
+</html>

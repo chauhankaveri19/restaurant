@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajputana Food Hub</title>
+<style>
+    /* ===== BODY ===== */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        overflow-x: hidden; /* prevent horizontal scroll */
+        
+    }
+
+    /* ===== HEADER ===== */
+    header h1 {
+        text-align: center;
+        background-color: rgb(223, 198, 168);
+        padding: 20px 0;
+        font-size: 28px;
+    }
+
+    /* ===== GRID CONTAINER ===== */
+    .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: rgb(243, 243, 187);
+    }
+
+    /* ===== ITEM BOX ===== */
+    .box {
+        border: 2px solid orange;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        background-color: #fff;
+        transition: transform 0.2s;
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+    }
+
+    /* ===== IMAGES ===== */
+    .box img {
+        width: 100%;      /* responsive */
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    /* ===== DISH NAME ===== */
+    .dish-name {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* ===== MEDIA QUERIES ===== */
+    @media screen and (max-width: 1024px) {
+        .items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .items {
+            grid-template-columns: 1fr;
+        }
+
+        header h1 {
+            font-size: 24px;
+            padding: 15px 0;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Rajputana Food Hub</h1>
+</header>
+
+<div class="items">
+
+    <div class="box">
+        <img src="https://assets.zeezest.com/blogs/PROD_Punjabi-Food_pro_1664782056577_thumb_1000.jpeg" alt="Punjabi Dish" usemap="#punjabi-map">
+        <map name="punjabi-map">
+            <area shape="rect" alt="punjabidish" href="punjabi.html" coords="0,0,1000,561">
+        </map>
+        <p class="dish-name">Punjabi Dish</p>
+    </div>
+
+    <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.InlgltnGNwj7W93dJ_oQ_gHaEQ?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="South Indian Dish" usemap="#southindian-map">
+        <map name="southindian-map">
+            <area shape="rect" alt="southindian" href="southindian.html" coords="0,0,473,271">
+        </map>
+        <p class="dish-name">South Indian Dish</p>
+    </div>
+
+    <div class="box">
+        <img src="https://img.freepik.com/premium-photo/diwali-thali-diwali-sweets-foods_1106939-136132.jpg" alt="Indian Sweets" usemap="#sweets-map">
+        <map name="sweets-map">
+            <area shape="rect" alt="sweets" href="sweets.html" coords="0,0,626,415">
+        </map>
+        <p class="dish-name">Indian Sweets</p>
+    </div>
+
+    <div class="box">
+        <img src="https://img.freepik.com/premium-photo/indian-desi-food-collection-white-background-curry-samosa-pakora-pani-puri-concept-indian-food-desi-cuisine-food-collection-samosa-pakora-pani-puri_918839-214114.jpg?w=1380" alt="Snacks" usemap="#snacks-map">
+        <map name="snacks-map">
+            <area shape="rect" alt="snacks" href="snacks.html" coords="0,0,1378,689">
+        </map>
+        <p class="dish-name">Snacks</p>
+    </div>
+
+    <div class="box">
+        <img src="https://www.jaipurstuff.com/wp-content/uploads/2019/09/dal-bati-churma-1-1024x870.jpg" alt="Rajasthani Dish" usemap="#rajasthani-map">
+        <map name="rajasthani-map">
+            <area shape="rect" alt="rajasthanifood" href="rajasthani.html" coords="0,0,1023,867">
+        </map>
+        <p class="dish-name">Rajasthani Dish</p>
+    </div>
+
+    <div class="box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.wiOFs5MqGT7j91sJ--83NAHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cold Drinks" usemap="#colddrinks-map">
+        <map name="colddrinks-map">
+            <area shape="rect" alt="colddrinks" href="colddrinks.html" coords="0,0,474,312">
+        </map>
+        <p class="dish-name">Cold Drinks</p>
+    </div>
+
+</div>
+
+</body>
+</html>

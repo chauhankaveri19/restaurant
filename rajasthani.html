@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajasthani Food</title>
+<style>
+    body {
+        background-color: rgb(248, 237, 223);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        background-color: rgb(253, 250, 248);
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    }
+
+    .rajasthani {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .rajasthani-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        background-color: #fff;
+        transition: transform 0.3s;
+    }
+
+    .rajasthani-images:hover {
+        transform: scale(1.05);
+    }
+
+    .rajasthani-images img {
+        width: 100%;   /* responsive */
+        height: auto;  /* maintain aspect ratio */
+        border-radius: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        background: orange;
+        border: none;
+        cursor: pointer;
+        margin-top: 8px;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        background: darkorange;
+    }
+
+    .msg {
+        color: green;
+        font-weight: bold;
+        margin-top: 5px;
+        min-height: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .rajasthani {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1>Rajasthani Food</h1>
+
+<div class="rajasthani">
+
+    <div class="rajasthani-images">
+        <img src="https://www.ndtv.com/cooks/images/rajasthani%20mirchi%20vada-620.jpg" alt="Mirchi Wada">
+        <h2>Mirchi Wada</h2>
+        <p>Price: ₹50</p>
+        <p>Origin: Rajasthan</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <div class="msg"></div>
+    </div>
+
+    <div class="rajasthani-images">
+        <img src="https://www.secondrecipe.com/wp-content/uploads/2020/11/dal-bati-churma.jpg" alt="Dal Baati Churma">
+        <h2>Dal Baati Churma</h2>
+        <p>Price: ₹350</p>
+        <p>Origin: Rajasthan</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <div class="msg"></div>
+    </div>
+
+    <div class="rajasthani-images">
+        <img src="https://i0.wp.com/vegecravings.com/wp-content/uploads/2017/06/Gatte-Ki-Sabzi-Recipe-Step-By-Step-Instructions.jpg" alt="Gatte Ki Sabzi">
+        <h2>Gatte Ki Sabzi</h2>
+        <p>Price: ₹250</p>
+        <p>Origin: Rajasthan</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <div class="msg"></div>
+    </div>
+
+    <div class="rajasthani-images">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/moong-dal-halwa-recipe.webp" alt="Moong Dal Halwa">
+        <h2>Moong Dal Halwa</h2>
+        <p>Price: ₹150</p>
+        <p>Origin: Rajasthan</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <div class="msg"></div>
+    </div>
+
+</div>
+
+<script>
+function addToCart(btn){
+  btn.nextElementSibling.innerText="added successfully ✅";
+}
+</script>
+
+</body>
+</html>
