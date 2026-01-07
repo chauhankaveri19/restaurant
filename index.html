@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rajputana Food Hub</title>
 <style>
-    /* ===== BODY ===== */
+  
     * {
         box-sizing: border-box;
         margin: 0;
@@ -15,11 +15,11 @@
     body {
         font-family: Arial, sans-serif;
         background-color: #f9f9f9;
-        overflow-x: hidden; /* prevent horizontal scroll */
+        overflow-x: hidden; 
         
     }
 
-    /* ===== HEADER ===== */
+    
     header h1 {
         text-align: center;
         background-color: rgb(223, 198, 168);
@@ -27,7 +27,6 @@
         font-size: 28px;
     }
 
-    /* ===== GRID CONTAINER ===== */
     .items {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -38,7 +37,7 @@
         background-color: rgb(243, 243, 187);
     }
 
-    /* ===== ITEM BOX ===== */
+  
     .box {
         border: 2px solid orange;
         border-radius: 10px;
@@ -52,22 +51,21 @@
         transform: scale(1.05);
     }
 
-    /* ===== IMAGES ===== */
     .box img {
-        width: 100%;      /* responsive */
+        width: 100%;     
         height: auto;
         display: block;
         border-radius: 8px;
     }
 
-    /* ===== DISH NAME ===== */
+  
     .dish-name {
         font-weight: bold;
         font-size: 18px;
         margin-top: 10px;
     }
 
-    /* ===== MEDIA QUERIES ===== */
+    
     @media screen and (max-width: 1024px) {
         .items {
             grid-template-columns: repeat(2, 1fr);
@@ -147,3 +145,4 @@
 
 </body>
 </html>
+
